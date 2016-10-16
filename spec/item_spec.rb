@@ -3,12 +3,12 @@ require 'spec_helper'
 describe Item do
 
   describe '#exempt' do
-  	context 'when item is free from taxes' do
-  		subject { Item.new(1, 'imported box of chocolates', 10.00) }
-	    it 'returns true' do
-      	expect(subject.exempt?).to be true
-    	end
-  	end
+    context 'when item is free from taxes' do
+      subject { Item.new(1, 'imported box of chocolates', 10.00) }
+      it 'returns true' do
+        expect(subject.exempt?).to be true
+      end
+    end
     context 'when item is not free from taxes' do
       subject { Item.new(1, 'music cd', 10.00) }
       it 'returns false' do

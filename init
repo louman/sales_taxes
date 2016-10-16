@@ -4,7 +4,7 @@ require_relative 'lib/sales_taxes/input'
 # Just add your csv purchase file to input_files folder and execute ./start
 files = Dir['input_files/*.csv']
 files.each_with_index do |file, index|
-	puts "Output #{index+1}"
-	Input.process file
-	puts ''
+  puts "Output #{index+1}"
+  Input.process file
+  puts ''
 end
