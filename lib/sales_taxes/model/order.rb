@@ -16,8 +16,8 @@ class Order
 
   def receipt
     items.each {|item| puts item.print }      
-    puts "Sales Taxes: #{sprintf('%.2f', sales_taxes)}"
-    puts "Total: #{sprintf('%.2f', total)}"
+    puts "Sales Taxes: #{sales_taxes}"
+    puts "Total: #{total}"
   end
 
   def sales_taxes
@@ -30,6 +30,7 @@ class Order
 
   private
   def sum_items(field)
-    items.map(&field).inject(0, &:+)
+    sum = items.map(&field).inject(0, &:+)
+    sprintf('%.2f', sum)
   end
 end

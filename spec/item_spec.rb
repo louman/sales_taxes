@@ -19,7 +19,7 @@ describe Item do
 
   describe '#price_plus_taxes' do
     context 'when item costs $10 and has basic taxes' do
-      item = Item.new(1, 'imported box of chocolates', 10.00)
+      item = Item.new(1, 'music cd', 10.00)
       BasicTaxableItem.new(item)
       it 'returns $11.0' do
         expect(item.price_plus_taxes).to eq(11.0)

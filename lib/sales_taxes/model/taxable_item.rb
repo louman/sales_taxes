@@ -6,7 +6,7 @@ class TaxableItem
 
   def initialize(item)
     @item = item
-    @item.taxes << Tax.new(self.class.name, @item.price * rate)   
+    @item.taxes << Tax.new(self.class.name, @item.price * rate) if applicable?
   end
 
 end
