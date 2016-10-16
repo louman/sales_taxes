@@ -1,0 +1,10 @@
+# Use this yml file to add more categories to exemptions list.
+# List any possible item description that might appear.
+exemptions:
+  book:
+    - book
+  food:
+    - chocolate
+    - chocolates  
+  medical:
+    - pills
